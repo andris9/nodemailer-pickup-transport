@@ -60,7 +60,7 @@ PickupTransport.prototype.send = function(mail, callback) {
     };
 
     input.on('error', _onError);
-    input.on('end', function() {
+    output.on('finish', function() {
         if (callbackSent) {
             return;
         }
